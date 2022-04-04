@@ -39,4 +39,4 @@
 * Text - текст статичного блока
 ---
 # Пример работы
-![image](https://user-images.githubusercontent.com/64701982/161607195-7534270a-dd4a-4a05-b7fd-b8ca5a2ea3c1.png)
+![image](https://user-images.githubusercontent.com/64701982/161607353-9a1299ab-0d0a-4590-a6b6-6493a5ddf868.png)
