@@ -1,0 +1,53 @@
+﻿{
+  "WidthScreen": 1920,
+  "HeightScreen": 1080,
+  "BackgroundColor": "0, 0, 0",
+  "IndentFromHorizontalEdge": 200,
+  "IndentFromVerticalEdge": 100,
+  "Font": "Inverkrug",
+  "DayTime": 
+  {
+    "IsEnabled": true,
+    "Color": "222, 62, 18",
+    "Size": 100,
+    "DynamicX": "Center",
+    "DynamicY": "Center",
+    "X": -1,
+    "Y": -1
+  },
+  "Date":
+  {
+    "IsEnabled": true,
+    "Color": "222, 62, 18",
+    "Size": 50,
+    "DynamicX": "Right",
+    "DynamicY": "Down",
+    "X": -1,
+    "Y": -1
+  },
+  "Temperature":
+  {
+    "IsEnabled": true,
+    "Color": "222, 62, 18",
+    "Size": 50,
+    "City": "Novosibirsk",
+    "AppId": "",
+    "DynamicX": "Left",
+    "DynamicY": "Up",
+    "X": -1,
+    "Y": -1
+  },
+  "CustomStrings": 
+  [
+    {
+      "IsEnabled": true,
+      "Text": "Hello, World!",
+      "Color": "222, 62, 18",
+      "Size": 50,
+      "DynamicX": "Empty",
+      "DynamicY": "Empty",
+      "X": 300,
+      "Y": 123 
+    }
+  ]
+}
