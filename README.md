@@ -6,11 +6,11 @@
 * Вывод текущего времени
 * Вывод текущего дня недели
 ---
-# Предварительная настройка:
+# Предварительная настройка
 1. Настройка в файле Settings/Settings.json параметра Temperature:AppId - id api-ключа на сайте https://openweathermap.org/
 2. Настройка остальных параметров в Settings/Settings.json по желанию
 ---
-# Описание файла настроек:
+# Описание файла настроек
 * WidthScreen - ширина экрана
 * HeightScreen - высота экрана
 * BackgroundColor - цвет фона
@@ -22,7 +22,7 @@
 * Temperature - параметры вывода температуры
 * CustomStrings - кастомные статичные строки
 ---
-## Общие для DayTime | Date | Temperature | CustomStrings 
+## Общие для DayTime | Date | Temperature | CustomStrings
 * IsEnabled - отображать ли данный элемент
 * Color - цвет в формате RGB
 * Size - размер шрифта
@@ -37,3 +37,6 @@
 ---
 ## Специфичные для CustomStrings
 * Text - текст статичного блока
+---
+# Пример работы
+![image](https://user-images.githubusercontent.com/64701982/161607195-7534270a-dd4a-4a05-b7fd-b8ca5a2ea3c1.png)
