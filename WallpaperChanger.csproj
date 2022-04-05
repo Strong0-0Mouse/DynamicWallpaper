@@ -12,7 +12,7 @@
 
     <ItemGroup>
       <None Update="Settings\Settings.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
 

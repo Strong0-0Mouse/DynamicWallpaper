@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using WallpaperChanger.Models;
+using WallpaperChanger.Models.Enums;
 using WallpaperChanger.Models.Workers;
 
 namespace WallpaperChanger
@@ -15,11 +17,13 @@ namespace WallpaperChanger
     public partial class MainWindow
     {
         private int _lastMinute = -1;
-        private Settings.Settings _settings;
+        private readonly Settings.Settings _settings;
 
-        private FileWorker _fileWorker;
-        private TimeReceiver _timeReceiver;
-        private WeatherReceiver _weatherReceiver;
+        private readonly FileWorker _fileWorker;
+        private readonly TimeReceiver _timeReceiver;
+        private readonly WeatherReceiver _weatherReceiver;
+
+        private bool _isPressed;
         
         public MainWindow()
         {
@@ -38,7 +42,7 @@ namespace WallpaperChanger
             _weatherReceiver = new WeatherReceiver(_settings);
             
             var timer = new Timer();
-            timer.Interval = 2000;
+            timer.Interval = 16;
             timer.AutoReset = true;
             timer.Elapsed += TimerOnElapsed;
             timer.Start();
@@ -46,6 +50,7 @@ namespace WallpaperChanger
         
         private void TimerOnElapsed(object sender, ElapsedEventArgs e)
         {
+            Application.Current.Dispatcher.Invoke(Mess);
             if (_lastMinute == DateTime.Now.Minute) return;
             _lastMinute = DateTime.Now.Minute;
             Application.Current.Dispatcher.Invoke(RenderBackground);
@@ -53,6 +58,19 @@ namespace WallpaperChanger
             {
                 _fileWorker.SetWallpaper(@"Wallpaper/background.jpg");
             });
+        }
+
+        private void Mess()
+        {
+            if (Win.IsMouseButtonPressed(MouseButton.LeftMouseButton) && !_isPressed)
+            {
+                _isPressed = true;
+            }
+            else if (!Win.IsMouseButtonPressed(MouseButton.LeftMouseButton) && _isPressed)
+            {
+                _isPressed = false;
+            }
+
         }
 
         private void RenderBackground()
